@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductsServiceTsService } from '../../services/products.service';
 import { Prodotto } from '../../models/Prodotto';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-drinks',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './drinks.component.html',
   styleUrl: './drinks.component.css'
 })
