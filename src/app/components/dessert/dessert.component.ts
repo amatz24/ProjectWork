@@ -7,7 +7,7 @@ import { Prodotto } from '../../models/Prodotto';
 
 @Component({
   selector: 'app-dessert',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './dessert.component.html',
   styleUrl: './dessert.component.css'
 })

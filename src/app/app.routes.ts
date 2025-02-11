@@ -7,6 +7,6 @@ import { DessertComponent } from './components/dessert/dessert.component';
 export const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: "drinks", component: DrinksComponent },
-    { path: 'burg', component: BurgersComponent }
-
+    { path: 'burg', component: BurgersComponent },
+    { path: 'dessert', component: DessertComponent }
 ];
