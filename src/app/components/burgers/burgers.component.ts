@@ -12,7 +12,8 @@ import { Prodotto } from '../../models/Prodotto';
 })
 export class BurgersComponent {
   prodotti : Prodotto[];
-  constructor(public productService :ProductsServiceTsService, private router: ActivatedRoute){
-    this.prodotti = this.productService.getProduct();
+
+  constructor(private productService :ProductsServiceTsService, private router: ActivatedRoute){
+    this.prodotti = this.productService.getBurger();
   }
 }

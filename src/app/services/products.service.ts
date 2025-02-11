@@ -90,5 +90,7 @@ export class ProductsServiceTsService {
 getProduct(): Prodotto[] {
     return this.prodotti;
   }
-
+getBurger(): Prodotto[] {
+    return this.getProduct().filter(prodotto => prodotto.Categoria === "Panini");
+}
 }
