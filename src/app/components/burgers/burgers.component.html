@@ -1,14 +1,14 @@
 <div class="d-flex flex-wrap justify-content-around">
     <div *ngFor="let prodotto of prodotti" class="card book">
-        <a routerLink="isbn/{{libro.isbn}}">
+        <!--<a routerLink="isbn/{{libro.isbn}}">
             <img class="card-img-top" [src]= "'https://covers.openlibrary.org/b/isbn/'+libro.isbn+'-L.jpg' " alt="Card image cap">
-        </a>   
+        </a>  -->
         <div class="card-body">
-            <h4 class="card-title">{{libro.title}}</h4>
-            <h5 class="card-title">{{libro.author}}</h5>
-            <p class="card-text">{{libro.description}}</p>
-            <!--<p *ngIf="libro.newBook ==true" class="text-end text-danger">Novità</p> -->
-            <p class="text-end text-danger" [class.d-none] = " !libro.newBook ">Novità</p>
+            <h4 class="card-title">{{prodotto.Descrizione}}</h4>
+            <h5 class="card-title">{{prodotto.Prezzo}}</h5>
+            <p class="card-text">{{prodotto.Categoria}}</p>
+            <!--<p *ngIf="libro.newBook ==true" class="text-end text-danger">Novità</p> 
+            <p class="text-end text-danger" [class.d-none] = " !libro.newBook ">Novità</p>-->
             
         </div>
     </div>
