@@ -7,13 +7,13 @@ import { Prodotto } from '../../models/Prodotto';
 
 @Component({
   selector: 'app-dessert',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './dessert.component.html',
   styleUrl: './dessert.component.css'
 })
 export class DessertComponent {
     prodotti : Prodotto[];
       constructor(public productService :ProductsServiceTsService, private router: ActivatedRoute){
-        this.prodotti = this.productService.getProduct();
+        this.prodotti = this.productService.getDessert();
       }
 }
