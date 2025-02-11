@@ -14,7 +14,7 @@ export class DrinksComponent {
   prodotti: Prodotto[];
   constructor(private productsService: ProductsServiceTsService,
     private route: ActivatedRoute) {
-      this.prodotti = this.productsService.getDrinks();
+      this.prodotti = this.productsService.getDrink();
   };
 }
 
