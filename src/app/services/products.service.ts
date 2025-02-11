@@ -87,5 +87,8 @@ export class ProductsServiceTsService {
     { Id: 19, Descrizione: "Cheesecake", Prezzo: 4.99, Categoria: "Caffè e Dolci", Immagine:"Cheesecake.png" },
     { Id: 20, Descrizione: "Brownie al Cioccolato", Prezzo: 3.99, Categoria: "Caffè e Dolci", Immagine:"Brownie.png" }
 ];
+getProduct(): Prodotto[] {
+    return this.prodotti;
+  }
 
 }
