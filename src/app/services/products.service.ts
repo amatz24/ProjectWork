@@ -93,10 +93,4 @@ getProduct(): Prodotto[] {
 getBurger(): Prodotto[] {
     return this.getProduct().filter(prodotto => prodotto.Categoria === "Panini");
 }
-getDrinks(): Prodotto[] {
-    return this.getProduct().filter(prodotto => prodotto.Categoria === "Bevande");
-}
-getDessert(): Prodotto[] {
-    return this.getProduct().filter(prodotto => prodotto.Categoria === "Caffè e Dolci");
-}
 }

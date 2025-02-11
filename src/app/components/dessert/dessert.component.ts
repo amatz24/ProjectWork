@@ -14,6 +14,6 @@ import { Prodotto } from '../../models/Prodotto';
 export class DessertComponent {
     prodotti : Prodotto[];
       constructor(public productService :ProductsServiceTsService, private router: ActivatedRoute){
-        this.prodotti = this.productService.getProduct();
+        this.prodotti = this.productService.getDessert();
       }
 }

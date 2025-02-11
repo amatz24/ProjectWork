@@ -1,8 +1,8 @@
 <div class="d-flex flex-wrap justify-content-around">
     <div *ngFor="let prodotto of prodotti" class="card book">
-        <!--<a routerLink="isbn/{{libro.isbn}}">
-            <img class="card-img-top" [src]= "'https://covers.openlibrary.org/b/isbn/'+libro.isbn+'-L.jpg' " alt="Card image cap">
-        </a>  -->
+        <!--<a routerLink="isbn/{{libro.isbn}}">-->
+            <img class="card-img-top" [src]= "'assets/'+prodotto.Immagine" alt="Card image cap">
+    
         <div class="card-body">
             <h4 class="card-title">{{prodotto.Descrizione}}</h4>
             <h5 class="card-title">{{prodotto.Prezzo}}</h5>
