@@ -1,10 +1,11 @@
 <div class="d-flex flex-wrap justify-content-around">
     <div *ngFor="let prodotto of prodotti" class="card book">
+        <img class="card-img-top" [src]= "'assets/'+prodotto.Immagine" alt="Card image cap">
         <div class="card-body">
+            <img src="" alt="">
             <h4 class="card-title">{{prodotto.Descrizione}}</h4>
             <h5 class="card-title">{{prodotto.Prezzo}}</h5>
             <p class="card-text">{{prodotto.Categoria}}</p>
-
         </div>
     </div>
 </div>
