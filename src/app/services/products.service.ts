@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
+import { Prodotto } from '../models/Prodotto';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductsServiceTsService {
-  const prodotti: Prodotto[] = [
+ prodotti: Prodotto[] = [
     {
         Id: 1,
         Descrizione: "Cheeseburger",
