@@ -1,8 +1,40 @@
-img{
+img {
     width: 250px;
     height: 250px;
 }
-.right{
+
+.right {
     display: flex;
     justify-content: space-between;
+}
+
+/* Contenitore ingrediente per allineare checkbox, testo e pulsanti */
+.ingrediente {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Contenitore dei pulsanti di quantità */
+.quantita-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Distanza uniforme tra i pulsanti */
+}
+
+/* Pulsanti di incremento/decremento */
+.btn-sm {
+    padding: 5px 10px;
+    font-size: 14px;
+    width: 30px; /* Larghezza fissa per allineare tutti */
+    text-align: center;
+}
+
+/* Quantità sempre centrata e con larghezza fissa */
+.quantita {
+    font-weight: bold;
+    min-width: 30px;
+    text-align: center;
 }

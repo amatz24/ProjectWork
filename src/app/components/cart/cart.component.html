@@ -1,1 +1,18 @@
-<p>cart works!</p>
+<h1>Carrello</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Titolo</th>
+            <th>Autore</th>
+            <th>Azioni</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let prodotto of cart">
+            <td>{{ prodotto.Descrizione }}</td>
+            <td>{{ prodotto.Prezzo }}</td>
+            <td>  <a class="text-danger" (click)="elimina(prodotto)">Elimina</a>  </td>
+        </tr>
+    </tbody>
+</table>
