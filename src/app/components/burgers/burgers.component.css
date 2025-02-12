@@ -17,14 +17,14 @@ img {
     border-bottom: 1px solid #ddd;
 }
 
-/* Contenitore dei pulsanti di quantità */
 .quantita-controls {
     display: flex;
+    flex-direction: column; /* Allinea i pulsanti in colonna */
     align-items: center;
-    gap: 10px; /* Distanza uniforme tra i pulsanti */
+    justify-content: center;
+    gap: 5px; /* Spazio uniforme tra i pulsanti */
 }
 
-/* Pulsanti di incremento/decremento */
 .btn-sm {
     padding: 5px 10px;
     font-size: 14px;
@@ -32,9 +32,9 @@ img {
     text-align: center;
 }
 
-/* Quantità sempre centrata e con larghezza fissa */
 .quantita {
     font-weight: bold;
     min-width: 30px;
     text-align: center;
 }
+

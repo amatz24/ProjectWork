@@ -29,11 +29,14 @@
             <label>{{ ingrediente.Descrizione }}</label>
             
             <!-- Controlli per quantità -->
-            <button class="btn btn-secondary btn-sm" (click)="modificaQuantita(ingrediente, -1)" 
+             <div>
+                <button class="btn btn-secondary btn-sm meno" (click)="modificaQuantita(ingrediente, -1)" 
                     [disabled]="ingrediente.Quantita <= ingrediente.QuantitaMin">-</button>
-            <span>{{ ingrediente.Quantita }}</span>
+            <span style="margin: 0 200px;">{{ ingrediente.Quantita }}</span>
             <button class="btn btn-secondary btn-sm" (click)="modificaQuantita(ingrediente, 1)" 
                     [disabled]="ingrediente.Quantita >= ingrediente.QuantitaMax">+</button>
+             </div>
+            
         </div>
 
         <div class="buttons">
