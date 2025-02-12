@@ -17,22 +17,23 @@ export class BurgersComponent {
   prodotti: Prodotto[]; // Array di tutti i prodotti
   selectedProduct: any = null; // Prodotto selezionato per modifica
   prezzoTotale: number = 0; // Prezzo totale dinamico
+  
 
   constructor(private productService: ProductsServiceTsService, private router: ActivatedRoute, public cartService: CartService) {
     this.prodotti = this.productService.getBurger();
   }
 
   // Funzione per calcolare il prezzo del prodotto basato sugli ingredienti
-  calcolaPrezzo() {
-    this.prezzoTotale = this.selectedProduct.Prezzo; // Prezzo base del prodotto
-    this.selectedProduct.Ingredienti.forEach((ingrediente: any) => {
-      if (ingrediente.checked) {
-        // Se l'ingrediente è selezionato, aggiungi il prezzo incrementale
-        this.prezzoTotale += ingrediente.IncrementoPrezzo * ingrediente.Quantita;
-      }
-    });
-  }
-
+ calcolaPrezzo() {
+  this.prezzoTotale = this.selectedProduct.Prezzo; // Prezzo base del prodotto
+  this.selectedProduct.Ingredienti.forEach((ingrediente: any) => {
+    if (ingrediente.checked) {
+      // Se l'ingrediente è selezionato, aggiungi l'incremento
+      this.prezzoTotale += (ingrediente.IncrementoPrezzo || 0) * Math.max(ingrediente.Quantita-ingrediente.QuantitaIniziale, 0);
+    }
+  });
+}
+  
   // Apri il modale di modifica
   openModifica(prodotto: any) {
     this.selectedProduct = { ...prodotto }; 
@@ -73,8 +74,6 @@ export class BurgersComponent {
   // Salva le modifiche e chiudi il modale
   salvaModifiche() {
     this.selectedProduct.Ingredienti = this.selectedProduct.Ingredienti.filter((ingrediente: any) => ingrediente.checked);
-    console.log("Nuovi ingredienti:", this.selectedProduct.Ingredienti);
-    console.log("Nuovo prezzo:", this.prezzoTotale); // Mostra il nuovo prezzo
     this.closeModifica();
   }
 

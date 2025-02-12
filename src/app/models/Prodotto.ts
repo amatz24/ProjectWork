@@ -7,6 +7,7 @@ export interface Ingrediente {
     QuantitaMax: number;
     IncrementoPrezzo?: number;
     Immagine: string;
+    QuantitaIniziale:  number;
 }
 
 export interface Prodotto {

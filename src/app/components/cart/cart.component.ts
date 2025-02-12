@@ -39,6 +39,7 @@ export class CartComponent {
  calcolaTotale(): number {
   return this.cart.reduce((totale, prodotto) => totale + (prodotto.Prezzo * prodotto.Quantita), 0);
 }
+
 paga(){
 
 }
