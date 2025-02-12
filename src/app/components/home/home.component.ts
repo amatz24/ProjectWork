@@ -24,13 +24,13 @@ export class HomeComponent {
 
   selectService() {
     this.serviceSelected = true;
-    this.asportoSelected = false; // Nasconde Asporto se Servizio al Tavolo è selezionato
-    this.tableConfirmed = false; // Reset della conferma tavolo
+    this.asportoSelected = false; 
+    this.tableConfirmed = false; 
   }
 
   selectAsporto() {
     this.asportoSelected = true;
-    this.serviceSelected = false; // Nasconde Servizio al Tavolo se Asporto è selezionato
+    this.serviceSelected = false; 
     this.tableConfirmed = false;
   }
 
@@ -39,7 +39,7 @@ export class HomeComponent {
     this.tableConfirmed = true;
     this.serviceSelected = false; // Nasconde il bottone servizio al tavolo dopo la conferma
     this.cartService.setNumTable(value)
-  }
+
   constructor(private cartService:CartService) {
     this.cartService.reset()
   }

@@ -9,8 +9,25 @@ import { ActivatedRoute } from '@angular/router';
   styleUrl: './about.component.css'
 })
 export class AboutComponent {
-  constructor(private router: ActivatedRoute){
+  showInfo = false;
+  selectedPerson: any = null;
 
+  persone = [
+    { nome: 'Antonio Russo', img: 'assets/antonio.jpeg', descrizione: 'Antonio è un esperto di...' },
+    { nome: 'Riccardo Signoretti', img: 'assets/ricky.jpeg', descrizione: 'Riccardo si occupa di...' },
+    { nome: 'Matteo Caroli', img: 'assets/matteo.jpeg', descrizione: 'Matteo è un professionista in...' },
+    { nome: 'Diego Randazzo', img: 'assets/diego.jpeg', descrizione: 'Diego ha esperienza in...' }
+  ];
+
+  info(persona: any) {
+    this.selectedPerson = persona;
+    this.showInfo = true;
+  }
+
+  closeModal() {
+    this.showInfo = false;
+  }
+  constructor(private router: ActivatedRoute){
   }
 
 }

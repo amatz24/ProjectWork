@@ -35,7 +35,7 @@
                 <button class="btn btn-secondary btn-sm meno" (click)="modificaQuantita(ingrediente, -1)" 
                     [disabled]="ingrediente.Quantita <= ingrediente.QuantitaMin">-</button>
                 <span class="quantita">{{ ingrediente.Quantita }}</span>
-                <button class="btn btn-secondary btn-sm" (click)="modificaQuantita(ingrediente, 1)" 
+                <button class="btn btn-secondary btn-sm" (click)="modificaQuantita(ingrediente, 1)" (click)="calcolaPrezzo()"
                     [disabled]="ingrediente.Quantita >= ingrediente.QuantitaMax">+</button>
             </div>
         </div>
@@ -46,7 +46,7 @@
 
         <div class="buttons">
             <button class="btn btn-danger" (click)="closeModifica()">Chiudi</button>
-            <button class="btn btn-success" (click)="salvaModifiche()">Conferma</button>
+            <button class="btn btn-success" (click)="salvaModifiche()" >Conferma</button>
         </div>
     </div>
 </div>

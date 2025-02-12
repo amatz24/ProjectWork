@@ -32,4 +32,5 @@ export class CartService {
   getNumTable(){
     return this.numTable;
   }
+  
 }
