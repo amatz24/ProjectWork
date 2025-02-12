@@ -7,6 +7,7 @@ import { Prodotto } from '../models/Prodotto';
 export class ProductsServiceTsService {
  prodotti: Prodotto[] = [
     {
+        Quantita: 1,
         Id: 1,
         Descrizione: "Cheeseburger",
         Prezzo: 5.99,
@@ -20,6 +21,7 @@ export class ProductsServiceTsService {
         ]
     },
     {
+        Quantita: 1,
         Id: 2,
         Descrizione: "Chicken Burger",
         Prezzo: 6.49,
@@ -33,6 +35,7 @@ export class ProductsServiceTsService {
         ]
     },
     {
+        Quantita: 1,
         Id: 3,
         Descrizione: "Bacon Burger",
         Prezzo: 7.49,
@@ -46,6 +49,7 @@ export class ProductsServiceTsService {
         ]
     },
     {
+        Quantita: 1,
         Id: 4,
         Descrizione: "BBQ Burger",
         Prezzo: 7.99,
@@ -59,6 +63,7 @@ export class ProductsServiceTsService {
         ]
     },
     {
+        Quantita: 1,
         Id: 5,
         Descrizione: "Guacamole Burger",
         Prezzo: 8.49,
@@ -71,21 +76,21 @@ export class ProductsServiceTsService {
             { Id: 704, Descrizione: "Pomodoro", Quantita: 1, QuantitaMin: 0, QuantitaMax: 2,IncrementoPrezzo:0.4, Immagine:"Pomodoro.png" },
         ]
     },
-    { Id: 6, Descrizione: "Patatine Fritte", Prezzo: 2.99, Categoria: "Contorni", Immagine:"PatatineFritte.png" },
-    { Id: 7, Descrizione: "Anelli di Cipolla", Prezzo: 3.49, Categoria: "Contorni", Immagine:"AnelliCipolla.png" },
-    { Id: 8, Descrizione: "Nuggets di Pollo", Prezzo: 4.99, Categoria: "Contorni", Immagine:"NuggetsPollo.png" },
-    { Id: 9, Descrizione: "Insalata Mista", Prezzo: 3.99, Categoria: "Contorni", Immagine:"InsalataMista.png" },
-    { Id: 10, Descrizione: "Mozzarella Sticks", Prezzo: 4.49, Categoria: "Contorni", Immagine:"MozzarellaSticks.png" },
-    { Id: 11, Descrizione: "Coca Cola", Prezzo: 1.99, Categoria: "Bevande", Immagine:"CocaCola.png" },
-    { Id: 12, Descrizione: "Acqua Naturale", Prezzo: 1.49, Categoria: "Bevande", Immagine:"AcquaNaturale.png" },
-    { Id: 13, Descrizione: "Acqua Frizzante", Prezzo: 1.49, Categoria: "Bevande", Immagine:"AcquaFrizzante.png" },
-    { Id: 14, Descrizione: "Sprite", Prezzo: 1.99, Categoria: "Bevande", Immagine:"Sprite.png" },
-    { Id: 15, Descrizione: "Tè Freddo al Limone", Prezzo: 2.49, Categoria: "Bevande", Immagine:"TeLimone.png" },
-    { Id: 16, Descrizione: "Espresso", Prezzo: 1.99, Categoria: "Caffè e Dolci", Immagine:"Espresso.png" },
-    { Id: 17, Descrizione: "Cappuccino", Prezzo: 2.99, Categoria: "Caffè e Dolci", Immagine:"Cappuccino.png" },
-    { Id: 18, Descrizione: "Latte Macchiato", Prezzo: 3.49, Categoria: "Caffè e Dolci", Immagine:"LatteMacchiato.png" },
-    { Id: 19, Descrizione: "Cheesecake", Prezzo: 4.99, Categoria: "Caffè e Dolci", Immagine:"Cheesecake.png" },
-    { Id: 20, Descrizione: "Brownie al Cioccolato", Prezzo: 3.99, Categoria: "Caffè e Dolci", Immagine:"Brownie.png" }
+    { Quantita: 1,Id: 6, Descrizione: "Patatine Fritte", Prezzo: 2.99, Categoria: "Contorni", Immagine:"PatatineFritte.png" },
+    { Quantita: 1,Id: 7, Descrizione: "Anelli di Cipolla", Prezzo: 3.49, Categoria: "Contorni", Immagine:"AnelliCipolla.png" },
+    { Quantita: 1,Id: 8, Descrizione: "Nuggets di Pollo", Prezzo: 4.99, Categoria: "Contorni", Immagine:"NuggetsPollo.png" },
+    { Quantita: 1,Id: 9, Descrizione: "Insalata Mista", Prezzo: 3.99, Categoria: "Contorni", Immagine:"InsalataMista.png" },
+    { Quantita: 1,Id: 10, Descrizione: "Mozzarella Sticks", Prezzo: 4.49, Categoria: "Contorni", Immagine:"MozzarellaSticks.png" },
+    { Quantita: 1,Id: 11, Descrizione: "Coca Cola", Prezzo: 1.99, Categoria: "Bevande", Immagine:"CocaCola.png" },
+    { Quantita: 1,Id: 12, Descrizione: "Acqua Naturale", Prezzo: 1.49, Categoria: "Bevande", Immagine:"AcquaNaturale.png" },
+    { Quantita: 1,Id: 13, Descrizione: "Acqua Frizzante", Prezzo: 1.49, Categoria: "Bevande", Immagine:"AcquaFrizzante.png" },
+    { Quantita: 1,Id: 14, Descrizione: "Sprite", Prezzo: 1.99, Categoria: "Bevande", Immagine:"Sprite.png" },
+    { Quantita: 1,Id: 15, Descrizione: "Tè Freddo al Limone", Prezzo: 2.49, Categoria: "Bevande", Immagine:"TeLimone.png" },
+    { Quantita: 1,Id: 16, Descrizione: "Espresso", Prezzo: 1.99, Categoria: "Caffè e Dolci", Immagine:"Espresso.png" },
+    { Quantita: 1,Id: 17, Descrizione: "Cappuccino", Prezzo: 2.99, Categoria: "Caffè e Dolci", Immagine:"Cappuccino.png" },
+    { Quantita: 1,Id: 18, Descrizione: "Latte Macchiato", Prezzo: 3.49, Categoria: "Caffè e Dolci", Immagine:"LatteMacchiato.png" },
+    { Quantita: 1,Id: 19, Descrizione: "Cheesecake", Prezzo: 4.99, Categoria: "Caffè e Dolci", Immagine:"Cheesecake.png" },
+    { Quantita: 1,Id: 20, Descrizione: "Brownie al Cioccolato", Prezzo: 3.99, Categoria: "Caffè e Dolci", Immagine:"Brownie.png" }
 ];
 getProduct(): Prodotto[] {
     return this.prodotti;

@@ -17,4 +17,5 @@ export interface Prodotto {
     Ingredienti?: Ingrediente[]
     Immagine: string;
     conGhiaccio?: boolean;
+    Quantita: number;
 }
