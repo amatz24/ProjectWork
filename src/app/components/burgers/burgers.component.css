@@ -37,11 +37,11 @@ img {
 }
 
 .overlay {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
-    height: 90vh;
+    height: 100%;
     background: rgba(0, 0, 0, 0.5); /* Sfondo semi-trasparente */
     display: flex;
     align-items: center;
@@ -59,10 +59,10 @@ img {
     max-width: 90%;
     text-align: center;
     z-index: 5000;
-}
-
-.buttons {
-    margin-top: 90px;
+  }
+  
+  .buttons{
+    margin-bottom: 10px;
     display: flex;
     justify-content: center;
     gap: 85px;
