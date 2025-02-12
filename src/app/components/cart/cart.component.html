@@ -3,9 +3,9 @@
 <table class="table" >
     <thead>
         <tr>
-            <th>prodotto</th>
-            <th class="align-middle">prezzo</th>
-            <th class="align-middle">Azioni</th>
+            <th>Prodotto</th>
+            <th class="align-middle">Prezzo</th>
+            <th class="align-middle">Quantita</th>
         </tr>
     </thead>
     <tbody>
@@ -29,7 +29,11 @@
         <tr>
             <th  class="text-end"><strong>Totale:</strong></th>
             <th class="align-middle"><strong>{{ calcolaTotale().toFixed(2) }}€</strong></th>
-            <th class="align-middle">Azioni</th>
+            <th class="align-middle ">
+                <button type="button" routerLink ="/success" class="btn btn-success">Paga</button>
+                <button type="button" routerLink ="/burg" class="btn btn-danger">Annulla Ordine</button>
+                
+            </th>
         </tr>
     </tfoot>
 </table>
