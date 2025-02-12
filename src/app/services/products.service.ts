@@ -14,10 +14,10 @@ export class ProductsServiceTsService {
         Categoria: "Panini",
         Immagine:"Cheeseburger.png",
         Ingredienti: [
-            { Id: 101, Descrizione: "Pane Burger", Quantita: 1, QuantitaMin: 1, QuantitaMax: 1, Immagine:"PaneBurger.png"  },
-            { Id: 102, Descrizione: "Carne di manzo", Quantita: 1, QuantitaMin: 1, QuantitaMax: 2, IncrementoPrezzo: 1, Immagine:"CarneManzo.png" },
-            { Id: 103, Descrizione: "Formaggio Cheddar", Quantita: 1, QuantitaMin: 0, QuantitaMax: 2, IncrementoPrezzo: 0.4, Immagine:"FormaggioCheddar.png" },
-            { Id: 104, Descrizione: "Ketchup", Quantita: 1, QuantitaMin: 0, QuantitaMax: 2, IncrementoPrezzo: 0.4, Immagine:"Ketchup.png" }
+            { Id: 101, Descrizione: "Pane Burger", Quantita: 1, QuantitaMin: 1, QuantitaMax: 1, Immagine:"PaneBurger.png",QuantitaIniziale:1  },
+            { Id: 102, Descrizione: "Carne di manzo", Quantita: 1, QuantitaMin: 1, QuantitaMax: 2, IncrementoPrezzo: 1, Immagine:"CarneManzo.png", QuantitaIniziale:1 },
+            { Id: 103, Descrizione: "Formaggio Cheddar", Quantita: 1, QuantitaMin: 0, QuantitaMax: 2, IncrementoPrezzo: 0.4, Immagine:"FormaggioCheddar.png", QuantitaIniziale:1},
+            { Id: 104, Descrizione: "Ketchup", Quantita: 1, QuantitaMin: 0, QuantitaMax: 2, IncrementoPrezzo: 0.4, Immagine:"Ketchup.png", QuantitaIniziale:1}
         ]
     },
     {
@@ -28,10 +28,10 @@ export class ProductsServiceTsService {
         Categoria: "Panini",
         Immagine:"ChickenBurger.png",
         Ingredienti: [
-            { Id: 201, Descrizione: "Pane Burger", Quantita: 1, QuantitaMin: 1, QuantitaMax: 1, Immagine:"PaneBurger.png" },
-            { Id: 202, Descrizione: "Petto di pollo fritto", Quantita: 1, QuantitaMin: 1, QuantitaMax: 2, IncrementoPrezzo: 1, Immagine:"PolloFritto.png" },
-            { Id: 203, Descrizione: "Maionese", Quantita: 1, QuantitaMin: 0, QuantitaMax: 2, IncrementoPrezzo: 0.4, Immagine:"Maionese.png" },
-            { Id: 204, Descrizione: "Insalata", Quantita: 1, QuantitaMin: 0, QuantitaMax: 2, IncrementoPrezzo: 0.4, Immagine:"Insalata.png" }
+            { Id: 201, Descrizione: "Pane Burger", Quantita: 1, QuantitaMin: 1, QuantitaMax: 1, Immagine:"PaneBurger.png", QuantitaIniziale:1},
+            { Id: 202, Descrizione: "Petto di pollo fritto", Quantita: 1, QuantitaMin: 1, QuantitaMax: 2, IncrementoPrezzo: 1, Immagine:"PolloFritto.png", QuantitaIniziale:1},
+            { Id: 203, Descrizione: "Maionese", Quantita: 1, QuantitaMin: 0, QuantitaMax: 2, IncrementoPrezzo: 0.4, Immagine:"Maionese.png", QuantitaIniziale:1 },
+            { Id: 204, Descrizione: "Insalata", Quantita: 1, QuantitaMin: 0, QuantitaMax: 2, IncrementoPrezzo: 0.4, Immagine:"Insalata.png",QuantitaIniziale:1 }
         ]
     },
     {
@@ -42,10 +42,10 @@ export class ProductsServiceTsService {
         Categoria: "Panini",
         Immagine:"BaconBurger.png",
         Ingredienti: [
-            { Id: 301, Descrizione: "Pane Burger", Quantita: 1, QuantitaMin: 1, QuantitaMax: 1, Immagine:"PaneBurger.png"  },
-            { Id: 302, Descrizione: "Carne di manzo", Quantita: 1, QuantitaMin: 1, QuantitaMax: 2, IncrementoPrezzo: 1, Immagine:"CarneManzo.png" },
-            { Id: 303, Descrizione: "Bacon", Quantita: 2, QuantitaMin: 1, QuantitaMax: 3,IncrementoPrezzo:0.6, Immagine:"Bacon.png" },
-            { Id: 304, Descrizione: "Formaggio Cheddar", Quantita: 1, QuantitaMin: 0, QuantitaMax: 2,IncrementoPrezzo:0.4, Immagine:"FormaggioCheddar.png" }
+            { Id: 301, Descrizione: "Pane Burger", Quantita: 1, QuantitaMin: 1, QuantitaMax: 1, Immagine:"PaneBurger.png",QuantitaIniziale:1  },
+            { Id: 302, Descrizione: "Carne di manzo", Quantita: 1, QuantitaMin: 1, QuantitaMax: 2, IncrementoPrezzo: 1, Immagine:"CarneManzo.png",QuantitaIniziale:1 },
+            { Id: 303, Descrizione: "Bacon", Quantita: 2, QuantitaMin: 1, QuantitaMax: 3,IncrementoPrezzo:0.6, Immagine:"Bacon.png",QuantitaIniziale:2 },
+            { Id: 304, Descrizione: "Formaggio Cheddar", Quantita: 1, QuantitaMin: 0, QuantitaMax: 2,IncrementoPrezzo:0.4, Immagine:"FormaggioCheddar.png",QuantitaIniziale:1 }
         ]
     },
     {
@@ -56,10 +56,10 @@ export class ProductsServiceTsService {
         Categoria: "Panini",
         Immagine:"BBQBurger.png",
         Ingredienti: [
-            { Id: 601, Descrizione: "Pane Burger", Quantita: 1, QuantitaMin: 1, QuantitaMax: 1, Immagine:"PaneBurger.png"  },
-            { Id: 602, Descrizione: "Carne di manzo", Quantita: 1, QuantitaMin: 1, QuantitaMax: 2, IncrementoPrezzo: 1, Immagine:"CarneManzo.png" },
-            { Id: 603, Descrizione: "Salsa BBQ", Quantita: 1, QuantitaMin: 0, QuantitaMax: 2,IncrementoPrezzo:0.4, Immagine:"SalsaBBQ.png" },
-            { Id: 604, Descrizione: "Cipolle fritte", Quantita: 1, QuantitaMin: 0, QuantitaMax: 2,IncrementoPrezzo:0.6, Immagine:"CipolleFritte.png" }
+            { Id: 601, Descrizione: "Pane Burger", Quantita: 1, QuantitaMin: 1, QuantitaMax: 1, Immagine:"PaneBurger.png",QuantitaIniziale:1  },
+            { Id: 602, Descrizione: "Carne di manzo", Quantita: 1, QuantitaMin: 1, QuantitaMax: 2, IncrementoPrezzo: 1, Immagine:"CarneManzo.png",QuantitaIniziale:1 },
+            { Id: 603, Descrizione: "Salsa BBQ", Quantita: 1, QuantitaMin: 0, QuantitaMax: 2,IncrementoPrezzo:0.4, Immagine:"SalsaBBQ.png",QuantitaIniziale:1 },
+            { Id: 604, Descrizione: "Cipolle fritte", Quantita: 1, QuantitaMin: 0, QuantitaMax: 2,IncrementoPrezzo:0.6, Immagine:"CipolleFritte.png",QuantitaIniziale:1 }
         ]
     },
     {
@@ -70,10 +70,10 @@ export class ProductsServiceTsService {
         Categoria: "Panini",
         Immagine:"GuacamoleBurger.png",
         Ingredienti: [
-            { Id: 701, Descrizione: "Pane Integrale", Quantita: 1, QuantitaMin: 1, QuantitaMax: 1, Immagine:"PaneBurger.png"  },
-            { Id: 702, Descrizione: "Carne di manzo", Quantita: 1, QuantitaMin: 1, QuantitaMax: 2, IncrementoPrezzo: 1, Immagine:"CarneManzo.png" },
-            { Id: 703, Descrizione: "Guacamole", Quantita: 1, QuantitaMin: 0, QuantitaMax: 2,IncrementoPrezzo:0.4, Immagine:"Guacamole.png" },
-            { Id: 704, Descrizione: "Pomodoro", Quantita: 1, QuantitaMin: 0, QuantitaMax: 2,IncrementoPrezzo:0.4, Immagine:"Pomodoro.png" },
+            { Id: 701, Descrizione: "Pane Integrale", Quantita: 1, QuantitaMin: 1, QuantitaMax: 1, Immagine:"PaneBurger.png",QuantitaIniziale:1},
+            { Id: 702, Descrizione: "Carne di manzo", Quantita: 1, QuantitaMin: 1, QuantitaMax: 2, IncrementoPrezzo: 1, Immagine:"CarneManzo.png",QuantitaIniziale:1},
+            { Id: 703, Descrizione: "Guacamole", Quantita: 1, QuantitaMin: 0, QuantitaMax: 2,IncrementoPrezzo:0.4, Immagine:"Guacamole.png",QuantitaIniziale:1},
+            { Id: 704, Descrizione: "Pomodoro", Quantita: 1, QuantitaMin: 0, QuantitaMax: 2,IncrementoPrezzo:0.4, Immagine:"Pomodoro.png",QuantitaIniziale:1},
         ]
     },
     { Quantita: 1,Id: 6, Descrizione: "Patatine Fritte", Prezzo: 2.99, Categoria: "Contorni", Immagine:"PatatineFritte.png" },
