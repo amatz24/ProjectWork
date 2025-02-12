@@ -1,3 +1,6 @@
+body{
+    overflow-y: scroll;
+}
 .carousel-inner img {
     width: 100vw;  /* Larghezza intera della viewport */
     height: 400px; /* Altezza fissa */
@@ -16,3 +19,14 @@
     border-radius: 20px;
     border-width: 3px;
 }
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Spazio tra i bottoni */
+    margin-top: 20px;
+  }
+
+  .btn1{
+    height: 250px;
+    width: 200px;
+  }
