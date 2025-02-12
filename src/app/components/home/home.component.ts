@@ -9,7 +9,8 @@ import { CartService } from '../../services/cart.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent {
+export class HomeComponent 
+{
   showForm = false;
   serviceSelected = false;
   asportoSelected = false;
@@ -39,6 +40,7 @@ export class HomeComponent {
     this.tableConfirmed = true;
     this.serviceSelected = false; // Nasconde il bottone servizio al tavolo dopo la conferma
     this.cartService.setNumTable(value)
+  }
 
   constructor(private cartService:CartService) {
     this.cartService.reset()
