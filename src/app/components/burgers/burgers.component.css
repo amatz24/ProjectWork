@@ -38,3 +38,50 @@ img {
     text-align: center;
 }
 
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 90vh;
+    background: rgba(0, 0, 0, 0.5); /* Sfondo semi-trasparente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5000; /* Assicurati che sia sopra tutto */
+  }
+  
+  .modale {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+    height: 400px;
+    width: 1000px;
+    max-width: 90%;
+    text-align: center;
+    z-index: 5000;
+  }
+  
+  .buttons{
+    margin-top: 90px;
+    display: flex;
+    justify-content: center;
+    gap: 85px;
+    
+  }
+  .ingredienti{
+    margin-top: 15px;
+  }
+  .buttons .btn-danger { /* Pulsante Chiudi */
+    width: 80px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .buttons .btn-success { /* Pulsante Conferma */
+    width: 110px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
