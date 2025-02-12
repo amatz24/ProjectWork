@@ -21,4 +21,7 @@ export class CartService {
     }
     return false;
   } 
+  reset(){
+    this.cart = [];
+  }
 }

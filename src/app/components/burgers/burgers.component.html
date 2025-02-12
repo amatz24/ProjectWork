@@ -26,10 +26,8 @@
         
         <div *ngFor="let ingrediente of selectedProduct.Ingredienti" class="ingrediente">
             <div class="ingredienti">
-                <input type="checkbox" [(ngModel)]="ingrediente.checked" 
-                    [disabled]="ingrediente.QuantitaMin > 0 && ingrediente.Quantita === ingrediente.QuantitaMin"
-                    (change)="toggleIngrediente(ingrediente)">
-                <label>{{ ingrediente.Descrizione }}</label>
+                <!-- Rimuoviamo la checkbox e mostriamo solo il nome dell'ingrediente -->
+                <label (click)="toggleIngrediente(ingrediente)">{{ ingrediente.Descrizione }}</label>
             </div>
             
             <!-- Controlli per quantità -->
@@ -43,7 +41,7 @@
         </div>
 
         <div class="prezzo-totale">
-            <h4>Prezzo totale: {{prezzoTotale}}</h4>
+            <h4>Prezzo totale: {{ prezzoTotale | currency: '€' }}</h4>
         </div>
 
         <div class="buttons">
