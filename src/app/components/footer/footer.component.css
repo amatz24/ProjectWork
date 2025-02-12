@@ -1,27 +1,40 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 footer {
-    background-color: rgb(247, 197, 16);
-    color: #f5f5f7; 
-    text-align: center; 
-    padding: 5px; 
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* Font di macOS */
-  }
-  
-  footer .footer-content {
-    margin-top: 10px;
-    font-size: 14px;
-  }
-  
-  footer a {
-    color: #007aff;
-    text-decoration: none;
-  }
-  
-  footer a:hover {
-    text-decoration: underline;
-  }
-  
-  footer .footer-bottom {
-    font-size: 12px;
-    margin-top: 10px;
-    color: #a1a1a6; 
-  }
+  background-color: rgb(247, 197, 16);
+  color: #f5f5f7; 
+  text-align: center; 
+  padding: 10px; 
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  position: relative;
+  margin-top: auto; /* Spinge il footer in basso solo se il contenuto è corto */
+}
+
+footer .footer-content {
+  font-size: 14px;
+}
+
+footer a {
+  color: #007aff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer .footer-bottom {
+  font-size: 12px;
+  color: #a1a1a6; 
+}

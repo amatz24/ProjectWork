@@ -1,5 +1,12 @@
 .header{
     background-color:rgb(253, 174, 5);
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;  
+
 }
 .vertical-bar{
     background: white;
@@ -8,4 +15,8 @@
     margin-left: 15px;
     margin-right: 15px;
 
+}
+.navbar{
+    margin: 0;
+    padding:0;
 }
