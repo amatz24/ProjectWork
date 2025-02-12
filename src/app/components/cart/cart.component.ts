@@ -3,10 +3,11 @@ import { CartService } from '../../services/cart.service';
 import { Prodotto } from '../../models/Prodotto';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-cart',
-  imports: [CommonModule,FormsModule],
+  imports: [CommonModule,FormsModule,RouterLink],
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.css'
 })
@@ -39,4 +40,7 @@ export class CartComponent {
   return this.cart.reduce((totale, prodotto) => totale + (prodotto.Prezzo * prodotto.Quantita), 0);
 }
 
+paga(){
+
+}
 }

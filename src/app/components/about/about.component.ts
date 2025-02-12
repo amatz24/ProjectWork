@@ -9,8 +9,13 @@ import { ActivatedRoute } from '@angular/router';
   styleUrl: './about.component.css'
 })
 export class AboutComponent {
-  constructor(private router: ActivatedRoute){
+  showInfo = false;
 
+
+  info(){
+    this.showInfo=true;
+  }
+  constructor(private router: ActivatedRoute){
   }
 
 }
