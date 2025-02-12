@@ -17,7 +17,6 @@ footer {
   text-align: center; 
   padding: 10px; 
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  position: relative;
   margin-top: auto; /* Spinge il footer in basso solo se il contenuto è corto */
 }
 
