@@ -1,5 +1,6 @@
 body{
     overflow-y: scroll;
+    margin-top: 0px;
 }
 .carousel-inner img {
     width: 100vw;  /* Larghezza intera della viewport */
