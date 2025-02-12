@@ -1,4 +1,4 @@
-/* Stile per l'immagine di sfondo con sovrapposizione e testo */
+/* Sezione Hero */
 .hero {
     position: relative;
     width: 100%;
@@ -15,7 +15,7 @@
     height: auto;
     object-fit: cover;
     display: block;
-    filter: brightness(70%); 
+    filter: brightness(70%);
 }
 
 .overlay {
@@ -24,7 +24,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4); 
+    background: rgba(0, 0, 0, 0.4);
 }
 
 .hero-text {
@@ -35,59 +35,111 @@
     z-index: 2;
 }
 
-img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-}
-
-/* Contenitore principale dell'immagine iniziale */
-.image-container {
-    position: relative;
-    width: 100%;
-    height: auto; 
-    top: 0;
-    margin-top: 0; 
-}
-
-/* Contenitore per la sezione "CHI SIAMO" */
+/* Contenitore persone */
 .container {
     display: flex;
-    flex-wrap: wrap; 
-    justify-content: space-between; 
-    gap: 20px; 
-    
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
 }
 
-/* Stile per ogni elemento della galleria */
 .item {
-    width: 48%; 
+    position: relative;
+    width: 48%;
     border: 1px solid #ccc;
-    padding: 10px;
+    padding: 15px;
     box-sizing: border-box;
     text-align: center;
-    border-radius: 10%;
+    border-radius: 10px;
+    background: #fff;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out
 }
 
-/* Stile per le immagini nella galleria */
+.item:hover {
+    transform: scale(1.02); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
 .item img {
     width: 100%;
     height: auto;
-    border-bottom: 1px solid #ccc; 
-    border-radius: 10%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-/* Stile per il testo sotto le immagini */
+.item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
 .item p {
     margin-top: 10px;
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: bold;
     color: #333;
 }
 
-/* Separatore */
+.info-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: #007bff;
+    transition: transform 0,2s, color 0,3s;
+}
+
+.info-icon:hover {
+    color: #ffffff;
+    background-color: #007bff;
+    border-radius: 50%;
+    padding: 5px;
+    transform: scale(1.0);
+}
+
 .separator {
     border-top: 2px solid #333;
     margin: 20px 0;
 }
 
+.overlay_2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modale {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    width: 400px;
+    text-align: center;
+    position: relative;
+}
+
+.modale-img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.btn-danger {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.btn-danger:hover {
+    background-color: darkred;
+}
