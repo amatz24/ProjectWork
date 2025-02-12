@@ -23,10 +23,12 @@
         <h3>Modifica ingredienti per {{ selectedProduct.Descrizione }}</h3>
         
         <div *ngFor="let ingrediente of selectedProduct.Ingredienti" class="ingrediente">
-            <input type="checkbox" [(ngModel)]="ingrediente.checked" 
+            <div class="ingredienti">
+                <input type="checkbox" [(ngModel)]="ingrediente.checked" 
                    [disabled]="ingrediente.QuantitaMin > 0 && ingrediente.Quantita === ingrediente.QuantitaMin"
                    (change)="toggleIngrediente(ingrediente)">
             <label>{{ ingrediente.Descrizione }}</label>
+            </div>
             
             <!-- Controlli per quantità -->
              <div>
