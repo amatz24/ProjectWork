@@ -99,5 +99,8 @@ getDrink(): Prodotto[] {
 getDessert(): Prodotto[] {
     return this.getProduct().filter(prodotto => prodotto.Categoria === "Caffè e Dolci");
 }
+getSideDish(): Prodotto[] {
+    return this.getProduct().filter(prodotto => prodotto.Categoria === "Contorni");
+}
 }
 
