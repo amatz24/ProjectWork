@@ -11,8 +11,8 @@
     <tbody>
         <tr *ngFor="let prodotto of cart">
             <td><img class="card-img-top" [src]= "'assets/'+prodotto.Immagine" alt="Card image cap"></td>       
-            <td>{{ prodotto.Descrizione }}</td>
-            <td>{{ prodotto.Prezzo }}</td>
+            <td class="text-center">{{ prodotto.Descrizione }}</td>
+            <td class="text-center">{{ prodotto.Prezzo }}</td>
             <td>  <a class="text-danger" (click)="elimina(prodotto)">Elimina</a>  </td>
         </tr>
     </tbody>
