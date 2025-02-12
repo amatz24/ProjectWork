@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { ProductsServiceTsService } from '../../services/products.service';
 import { ActivatedRoute } from '@angular/router';
 import { Prodotto } from '../../models/Prodotto';
+import { CartService } from '../../services/cart.service';
 
 
 @Component({
@@ -13,7 +14,7 @@ import { Prodotto } from '../../models/Prodotto';
 })
 export class DessertComponent {
     prodotti : Prodotto[];
-      constructor(public productService :ProductsServiceTsService, private router: ActivatedRoute){
+      constructor(public productService :ProductsServiceTsService, private router: ActivatedRoute, public cartService :CartService){
         this.prodotti = this.productService.getDessert();
       }
 }
