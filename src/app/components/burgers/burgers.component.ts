@@ -11,7 +11,7 @@ import { CartService } from '../../services/cart.service';
   standalone: true,
   imports: [CommonModule, FormsModule],
   templateUrl: './burgers.component.html',
-  styleUrls: ['./burgers.component.css']
+  styleUrl: './burgers.component.css'
 })
 export class BurgersComponent {
   prodotti: Prodotto[]; // Array di tutti i prodotti
@@ -58,14 +58,16 @@ export class BurgersComponent {
     this.calcolaPrezzo(); // Ricalcola il prezzo ogni volta che la quantità cambia
   }
 
-  // Toggle checkbox degli ingredienti
+  // Toggle per selezionare o deselezionare un ingrediente (senza checkbox)
   toggleIngrediente(ingrediente: any) {
-    if (!ingrediente.checked) {
-      ingrediente.Quantita = 0;  // Se viene deselezionato, la quantità diventa 0
+    ingrediente.checked = !ingrediente.checked;
+
+    if (ingrediente.checked) {
+      ingrediente.Quantita = ingrediente.QuantitaMin;  // Impostiamo la quantità al minimo quando selezionato
     } else {
-      ingrediente.Quantita = ingrediente.QuantitaMin; // Se selezionato, riportiamo la quantità al minimo consentito
+      ingrediente.Quantita = 0;  // Impostiamo la quantità a 0 quando deselezionato
     }
-    this.calcolaPrezzo(); // Ricalcola il prezzo ogni volta che si seleziona o deseleziona un ingrediente
+    this.calcolaPrezzo();  // Ricalcoliamo il prezzo
   }
 
   // Salva le modifiche e chiudi il modale
