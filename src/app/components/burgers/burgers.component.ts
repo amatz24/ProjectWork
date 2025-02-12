@@ -3,8 +3,9 @@ import { Component } from '@angular/core';
 import { ProductsServiceTsService } from '../../services/products.service';
 import { ActivatedRoute } from '@angular/router';
 import { Prodotto } from '../../models/Prodotto';
-import { CarrelloService } from '../../services/carrello.service';
 import { FormsModule } from '@angular/forms';
+import { CartService } from '../../services/cart.service';
+
 
 @Component({
   selector: 'app-burgers',
@@ -16,8 +17,7 @@ import { FormsModule } from '@angular/forms';
 export class BurgersComponent {
   prodotti: Prodotto[];
   selectedProduct: any = null;
-
-  constructor(private productService: ProductsServiceTsService, private router: ActivatedRoute, public carrelloService: CarrelloService) {
+  constructor(private productService :ProductsServiceTsService, private router: ActivatedRoute,public cartService :CartService){
     this.prodotti = this.productService.getBurger();
   }
 
