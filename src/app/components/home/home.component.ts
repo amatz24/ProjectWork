@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-home',
@@ -38,5 +39,7 @@ export class HomeComponent {
     this.tableConfirmed = true;
     this.serviceSelected = false; // Nasconde il bottone servizio al tavolo dopo la conferma
   }
-  constructor() {}
+  constructor(private cartService:CartService) {
+    this.cartService.reset()
+  }
 }
