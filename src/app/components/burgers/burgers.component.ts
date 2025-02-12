@@ -17,26 +17,29 @@ export class BurgersComponent {
   prodotti: Prodotto[]; // Array di tutti i prodotti
   selectedProduct: any = null; // Prodotto selezionato per modifica
   prezzoTotale: number = 0; // Prezzo totale dinamico
-  
+
 
   constructor(private productService: ProductsServiceTsService, private router: ActivatedRoute, public cartService: CartService) {
     this.prodotti = this.productService.getBurger();
   }
 
   // Funzione per calcolare il prezzo del prodotto basato sugli ingredienti
- calcolaPrezzo() {
-  this.prezzoTotale = this.selectedProduct.Prezzo; // Prezzo base del prodotto
-  this.selectedProduct.Ingredienti.forEach((ingrediente: any) => {
-    if (ingrediente.checked) {
-      // Se l'ingrediente è selezionato, aggiungi l'incremento
-      this.prezzoTotale += (ingrediente.IncrementoPrezzo || 0) * Math.max(ingrediente.Quantita-ingrediente.QuantitaIniziale, 0);
-    }
-  });
-}
+  calcolaPrezzo() {
+    this.prezzoTotale = this.selectedProduct.Prezzo;
+    this.selectedProduct.Ingredienti.forEach((ingrediente: any) => {
+      if (ingrediente.checked) {
+        this.prezzoTotale += (ingrediente.IncrementoPrezzo || 0) * Math.max(ingrediente.Quantita - ingrediente.QuantitaIniziale, 0);
+      }
+    });
   
+    // Arrotonda a 2 cifre decimali
+    this.prezzoTotale = parseFloat(this.prezzoTotale.toFixed(2));
+  }
+  
+
   // Apri il modale di modifica
   openModifica(prodotto: any) {
-    this.selectedProduct = { ...prodotto }; 
+    this.selectedProduct = { ...prodotto };
     this.selectedProduct.Ingredienti = this.selectedProduct.Ingredienti.map((ingrediente: any) => ({
       ...ingrediente,
       checked: ingrediente.Quantita >= ingrediente.QuantitaMin
@@ -73,9 +76,18 @@ export class BurgersComponent {
 
   // Salva le modifiche e chiudi il modale
   salvaModifiche() {
+    // Aggiorna il prezzo del prodotto selezionato
+    this.selectedProduct.Prezzo = this.prezzoTotale;
+
+    // Rimuove gli ingredienti non selezionati
     this.selectedProduct.Ingredienti = this.selectedProduct.Ingredienti.filter((ingrediente: any) => ingrediente.checked);
+
+    // Aggiunge il prodotto aggiornato al carrello
+    this.cartService.add({ ...this.selectedProduct });
+
     this.closeModifica();
   }
+
 
   // Chiudi il modale senza salvare
   closeModifica() {
