@@ -19,10 +19,8 @@ img {
 
 .quantita-controls {
     display: flex;
-    flex-direction: column; /* Allinea i pulsanti in colonna */
     align-items: center;
-    justify-content: center;
-    gap: 5px; /* Spazio uniforme tra i pulsanti */
+    gap: 5px; /* Spazio tra i pulsanti */
 }
 
 .btn-sm {
@@ -49,9 +47,9 @@ img {
     align-items: center;
     justify-content: center;
     z-index: 5000; /* Assicurati che sia sopra tutto */
-  }
+}
   
-  .modale {
+.modale {
     background: white;
     border-radius: 10px;
     padding: 20px;
@@ -61,27 +59,27 @@ img {
     max-width: 90%;
     text-align: center;
     z-index: 5000;
-  }
-  
-  .buttons{
+}
+
+.buttons {
     margin-top: 90px;
     display: flex;
     justify-content: center;
     gap: 85px;
-    
-  }
-  .ingredienti{
+}
+
+.ingredienti {
     margin-top: 15px;
-  }
-  .buttons .btn-danger { /* Pulsante Chiudi */
+}
+
+.buttons .btn-danger { /* Pulsante Chiudi */
     width: 80px;
     font-size: 18px;
     font-weight: bold;
-  }
-  
-  .buttons .btn-success { /* Pulsante Conferma */
+}
+
+.buttons .btn-success { /* Pulsante Conferma */
     width: 110px;
     font-size: 18px;
     font-weight: bold;
-  }
-  
+}
