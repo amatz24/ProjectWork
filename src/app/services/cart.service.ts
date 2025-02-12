@@ -6,6 +6,7 @@ import { Prodotto } from '../models/Prodotto';
 })
 export class CartService {
   private cart:Prodotto[] = [];
+  private numTable:string = "";
   constructor() { }
   getAll():Prodotto[] {
     return this.cart;
@@ -32,6 +33,13 @@ export class CartService {
   } 
   reset(){
     this.cart = [];
+    this.numTable = ""
+  }
+  setNumTable(n:string){
+    this.numTable = n;
+  }
+  getNumTable(){
+    return this.numTable;
   }
   
 }

@@ -6,6 +6,8 @@ import { DessertComponent } from './components/dessert/dessert.component';
 import { CartComponent } from './components/cart/cart.component';
 import { SidedishComponent } from './components/sidedish/sidedish.component';
 import { AboutComponent } from './components/about/about.component';
+import { OrderSuccessComponent } from './components/order-success/order-success.component';
+import { OrderUndoComponent } from './components/order-undo/order-undo.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -14,6 +16,8 @@ export const routes: Routes = [
     { path: 'dessert', component: DessertComponent },
     {path:'cart',component: CartComponent},
     { path: 'Side', component: SidedishComponent },
-    { path: 'about', component: AboutComponent}
+    { path: 'about', component: AboutComponent},
+    { path: 'success', component: OrderSuccessComponent},
+    { path: 'undo', component: OrderUndoComponent}
 
 ];
