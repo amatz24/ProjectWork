@@ -38,7 +38,7 @@ export class HomeComponent
   confirmTable(value: string) {
     console.log("Numero tavolo selezionato:", value);
     this.tableConfirmed = true;
-    this.serviceSelected = false; // Nasconde il bottone servizio al tavolo dopo la conferma
+    this.serviceSelected = false; 
     this.cartService.setNumTable(value)
   }
 

@@ -1,17 +1,17 @@
 html, body {
-  height: 100%; /* La pagina deve occupare tutta l'altezza della finestra */
-  margin: 0;    /* Rimuovi il margine di default */
+  height: 100%; 
+  margin: 0;    
 }
 
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Garantisce che la pagina occupi tutta l'altezza della finestra */
+  min-height: 100vh; 
 }
 
 .main-content {
-  flex: 1; /* Il contenuto principale occupa lo spazio rimanente */
-  padding-bottom: 380px; /* Aggiungi un po' di spazio sul fondo per evitare che il footer tocchi l'ultimo contenuto */
+  flex: 1; 
+  padding-bottom: 380px; 
 }
 
 footer {
@@ -21,8 +21,8 @@ footer {
   padding: 10px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   width: 100%;
-  position: relative; /* Gestisce la posizione del footer */
-  margin-top: 10px;  /* Un piccolo margine sopra il footer per dare distanza al contenuto */
+  position: relative; 
+  margin-top: 10px;  
 }
 
 footer .footer-content {
