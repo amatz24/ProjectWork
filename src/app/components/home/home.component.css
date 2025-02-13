@@ -3,10 +3,10 @@ body{
     margin-top: 0px;
 }
 .carousel-inner img {
-    width: 100vw;  /* Larghezza intera della viewport */
-    height: 400px; /* Altezza fissa */
-    object-fit: cover; /* Ritaglia l'immagine per riempire lo spazio */
-    object-position: center; /* Modifica per spostare l'immagine */
+    width: 100vw;  
+    height: 400px; 
+    object-fit: cover; 
+    object-position: center; 
 }
 .container-fluid{
     margin: 0;

@@ -8,7 +8,6 @@ img {
     justify-content: space-between;
 }
 
-/* Contenitore ingrediente per allineare checkbox, testo e pulsanti */
 .ingrediente {
     display: flex;
     align-items: center;
@@ -20,13 +19,13 @@ img {
 .quantita-controls {
     display: flex;
     align-items: center;
-    gap: 5px; /* Spazio tra i pulsanti */
+    gap: 5px; 
 }
 
 .btn-sm {
     padding: 5px 10px;
     font-size: 14px;
-    width: 30px; /* Larghezza fissa per allineare tutti */
+    width: 30px; 
     text-align: center;
 }
 
@@ -42,11 +41,11 @@ img {
     left: 0;
     width: 100vw;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Sfondo semi-trasparente */
+    background: rgba(0, 0, 0, 0.5); 
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 5000; /* Assicurati che sia sopra tutto */
+    z-index: 5000;
 }
   
 .modale {
@@ -72,13 +71,13 @@ img {
     margin-top: 15px;
 }
 
-.buttons .btn-danger { /* Pulsante Chiudi */
+.buttons .btn-danger {
     width: 80px;
     font-size: 18px;
     font-weight: bold;
 }
 
-.buttons .btn-success { /* Pulsante Conferma */
+.buttons .btn-success { 
     width: 110px;
     font-size: 18px;
     font-weight: bold;

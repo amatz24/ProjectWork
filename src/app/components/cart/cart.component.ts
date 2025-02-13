@@ -28,13 +28,11 @@ export class CartComponent {
   }
   incrementaQuantita(prodotto: Prodotto) {
     prodotto.Quantita++;
-    // Puoi aggiungere qui la logica per aggiornare la quantità nel servizio se necessario
   }
 
   decrementaQuantita(prodotto: Prodotto) {
     if (prodotto.Quantita > 1) {
       prodotto.Quantita--;
-      // Puoi aggiungere qui la logica per aggiornare la quantità nel servizio se necessario
     }
  }
  calcolaTotale(): number {
