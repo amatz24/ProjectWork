@@ -3,7 +3,7 @@ import { CartService } from '../../services/cart.service';
 import { Prodotto } from '../../models/Prodotto';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-cart',
@@ -13,8 +13,9 @@ import { RouterLink } from '@angular/router';
 })
 export class CartComponent {
   cart:Prodotto[] = [];
+  showAlert: boolean = false; 
   selectedProduct: any = null;
-  constructor(public cartService:CartService){
+  constructor(public cartService:CartService, private router:Router){
     this.cart = this.cartService.getAll();
   }
   prezzoTot(prodotto:Prodotto[]){
@@ -40,7 +41,12 @@ export class CartComponent {
   return this.cart.reduce((totale, prodotto) => totale + (prodotto.Prezzo * prodotto.Quantita), 0);
 }
 
-paga(){
-
+paga() {
+  if (this.cart.length === 0) {
+    this.showAlert = true; // Mostra l'alert
+  } else {
+    this.showAlert = false; // Nascondi l'alert (se era visibile)
+    this.router.navigate(['/success']); // Reindirizza alla pagina di successo
+  }
 }
 }

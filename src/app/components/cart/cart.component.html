@@ -1,5 +1,13 @@
+<!-- Alert Bootstrap per il carrello vuoto -->
+<div *ngIf="showAlert" class="alert alert-danger d-flex align-items-center" role="alert">
+    <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Danger:">
+        <use xlink:href="#exclamation-triangle-fill" />
+    </svg>
+    <div>
+      Il carrello è vuoto. Aggiungi prodotti prima di pagare.
+    </div>
+  </div>    
 <h1>Carrello</h1>
-
 <table class="table" >
     <thead>
         <tr>
@@ -34,7 +42,7 @@
             <th  class="text-end"><strong>Totale:</strong></th>
             <th class="align-middle"><strong>{{ calcolaTotale().toFixed(2) }}€</strong></th>
             <th class="align-middle ">
-                <button type="button" routerLink ="/success" class="btn btn-success">Paga</button>
+                <button type="button" (click)="paga()" class="btn btn-success">Paga</button>
                 <button type="button" routerLink ="/undo" class="btn btn-danger">Annulla Ordine</button>
             </th>
         </tr>

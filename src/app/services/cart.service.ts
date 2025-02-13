@@ -41,5 +41,7 @@ export class CartService {
   getNumTable(){
     return this.numTable;
   }
-  
+  get count():number {
+    return this.cart.length;
+  }
 }
