@@ -19,18 +19,15 @@
     </div>
 </div>
 
-<!-- MODALE -->
 <div class="overlay" *ngIf="selectedProduct">
     <div class="modale">
         <h3>Modifica ingredienti per {{ selectedProduct.Descrizione }}</h3>
         
         <div *ngFor="let ingrediente of selectedProduct.Ingredienti" class="ingrediente">
             <div class="ingredienti">
-                <!-- Rimuoviamo la checkbox e mostriamo solo il nome dell'ingrediente -->
                 <label (click)="toggleIngrediente(ingrediente)">{{ ingrediente.Descrizione }}</label>
             </div>
             
-            <!-- Controlli per quantità -->
             <div class="quantita-controls">
                 <button class="btn btn-secondary btn-sm meno" (click)="modificaQuantita(ingrediente, -1)" 
                     [disabled]="ingrediente.Quantita <= ingrediente.QuantitaMin">-</button>

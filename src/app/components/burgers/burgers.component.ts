@@ -14,16 +14,15 @@ import { CartService } from '../../services/cart.service';
   styleUrl: './burgers.component.css'
 })
 export class BurgersComponent {
-  prodotti: Prodotto[]; // Array di tutti i prodotti
-  selectedProduct: any = null; // Prodotto selezionato per modifica
-  prezzoTotale: number = 0; // Prezzo totale dinamico
+  prodotti: Prodotto[]; 
+  selectedProduct: any = null; 
+  prezzoTotale: number = 0; 
 
 
   constructor(private productService: ProductsServiceTsService, private router: ActivatedRoute, public cartService: CartService) {
     this.prodotti = this.productService.getBurger();
   }
 
-  // Funzione per calcolare il prezzo del prodotto basato sugli ingredienti
   calcolaPrezzo() {
     this.prezzoTotale = this.selectedProduct.Prezzo;
     this.selectedProduct.Ingredienti.forEach((ingrediente: any) => {
@@ -32,64 +31,55 @@ export class BurgersComponent {
       }
     });
   
-    // Arrotonda a 2 cifre decimali
     this.prezzoTotale = parseFloat(this.prezzoTotale.toFixed(2));
   }
   
 
-  // Apri il modale di modifica
   openModifica(prodotto: any) {
     this.selectedProduct = { ...prodotto };
     this.selectedProduct.Ingredienti = this.selectedProduct.Ingredienti.map((ingrediente: any) => ({
       ...ingrediente,
       checked: ingrediente.Quantita >= ingrediente.QuantitaMin
     }));
-    this.calcolaPrezzo(); // Calcola il prezzo iniziale quando il modale si apre
+    this.calcolaPrezzo(); 
   }
 
-  // Modifica la quantità dell'ingrediente rispettando i limiti
   modificaQuantita(ingrediente: any, variazione: number) {
     let nuovaQuantita = ingrediente.Quantita + variazione;
     if (nuovaQuantita >= ingrediente.QuantitaMin && nuovaQuantita <= ingrediente.QuantitaMax) {
       ingrediente.Quantita = nuovaQuantita;
     }
 
-    // Se la quantità diventa minore del minimo, forziamo la checkbox a essere selezionata
     if (ingrediente.Quantita <= ingrediente.QuantitaMin) {
       ingrediente.checked = true;
     }
 
-    this.calcolaPrezzo(); // Ricalcola il prezzo ogni volta che la quantità cambia
+    this.calcolaPrezzo(); 
   }
 
-  // Toggle per selezionare o deselezionare un ingrediente (senza checkbox)
   toggleIngrediente(ingrediente: any) {
     ingrediente.checked = !ingrediente.checked;
 
     if (ingrediente.checked) {
-      ingrediente.Quantita = ingrediente.QuantitaMin;  // Impostiamo la quantità al minimo quando selezionato
+      ingrediente.Quantita = ingrediente.QuantitaMin;  
     } else {
-      ingrediente.Quantita = 0;  // Impostiamo la quantità a 0 quando deselezionato
+      ingrediente.Quantita = 0;  
     }
-    this.calcolaPrezzo();  // Ricalcoliamo il prezzo
+    this.calcolaPrezzo();  
   }
 
-  // Salva le modifiche e chiudi il modale
+  
   salvaModifiche() {
-    // Aggiorna il prezzo del prodotto selezionato
     this.selectedProduct.Prezzo = this.prezzoTotale;
 
-    // Rimuove gli ingredienti non selezionati
     this.selectedProduct.Ingredienti = this.selectedProduct.Ingredienti.filter((ingrediente: any) => ingrediente.checked);
 
-    // Aggiunge il prodotto aggiornato al carrello
     this.cartService.add({ ...this.selectedProduct });
 
     this.closeModifica();
   }
 
 
-  // Chiudi il modale senza salvare
   closeModifica() {
     this.selectedProduct = null;
   }
