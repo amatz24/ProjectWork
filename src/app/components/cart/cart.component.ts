@@ -4,6 +4,7 @@ import { Prodotto } from '../../models/Prodotto';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
+import { ProductsServiceTsService } from '../../services/products.service';
 
 @Component({
   selector: 'app-cart',
@@ -15,7 +16,7 @@ export class CartComponent {
   cart:Prodotto[] = [];
   showAlert: boolean = false; 
   selectedProduct: any = null;
-  constructor(public cartService:CartService, private router:Router){
+  constructor(public cartService:CartService, private router:Router ,public productService:ProductsServiceTsService ){
     this.cart = this.cartService.getAll();
   }
   prezzoTot(prodotto:Prodotto[]){

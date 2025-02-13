@@ -72,10 +72,12 @@ export class BurgersComponent {
   salvaModifiche() {
     this.selectedProduct.Prezzo = this.prezzoTotale;
 
+    // Filtra solo gli ingredienti selezionati e aggiungi al prodotto
     this.selectedProduct.Ingredienti = this.selectedProduct.Ingredienti.filter((ingrediente: any) => ingrediente.checked);
-
-    this.cartService.add({ ...this.selectedProduct });
-
+  
+    // Aggiungi il prodotto con gli ingredienti al carrello
+    this.cartService.add({ ...this.selectedProduct, ingredienti: [...this.selectedProduct.Ingredienti] });
+  
     this.closeModifica();
   }
 

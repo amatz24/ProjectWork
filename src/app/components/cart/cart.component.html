@@ -18,7 +18,11 @@
     </thead>
     <tbody>
         <tr *ngFor="let prodotto of cart">
-            <td><img class="card-img-top" [src]= "'assets/'+prodotto.Immagine" alt="Card image cap"> {{ prodotto.Descrizione }}</td>       
+            <td><img class="card-img-top" [src]= "'assets/'+prodotto.Immagine" alt="Card image cap"> {{ prodotto.Descrizione }}<ul *ngIf="prodotto.Ingredienti && prodotto.Ingredienti.length">
+                <li *ngFor="let ingrediente of prodotto.Ingredienti">
+                  {{ ingrediente.Descrizione }}: {{ ingrediente.Quantita }}
+                </li>
+              </ul></td>       
             <td class="align-middle">{{ prodotto.Prezzo }}€</td>
             <td class="align-middle">
                 <div class="input-group" style="width: 120px;">
