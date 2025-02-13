@@ -3,7 +3,19 @@
    
     
 }
-
+.distanza{
+    height: 70px;
+}
+.stile-font{
+    font-size: 40px;
+}
+.btn-big{
+    width: 200px;
+    height: 90px;
+    font-size: 35px;
+    border-radius: 20%;
+    
+}
 .carousel-inner img {
     width: 100vw;  
     height: 400px; 
@@ -32,4 +44,7 @@
   .btn1{
     height: 250px;
     width: 200px;
+    font-size: 30px;
+    border-width: 5px;
+    border-radius: 20px;
   }
