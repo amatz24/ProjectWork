@@ -13,10 +13,10 @@ export class AboutComponent {
   selectedPerson: any = null;
 
   persone = [
-    { nome: 'Antonio Russo', img: 'assets/antonio.jpeg', descrizione: 'Antonio è un esperto di...' },
-    { nome: 'Riccardo Signoretti', img: 'assets/ricky.jpeg', descrizione: 'Riccardo si occupa di...' },
-    { nome: 'Matteo Caroli', img: 'assets/matteo.jpeg', descrizione: 'Matteo è un professionista in...' },
-    { nome: 'Diego Randazzo', img: 'assets/diego.jpeg', descrizione: 'Diego ha esperienza in...' }
+    { nome: 'Antonio Russo', img: 'assets/antonio.jpeg', descrizione: '' },
+    { nome: 'Riccardo Signoretti', img: 'assets/ricky.jpeg', descrizione: '' },
+    { nome: 'Matteo Caroli', img: 'assets/matteo.jpeg', descrizione: '' },
+    { nome: 'Diego Randazzo', img: 'assets/diego.jpeg', descrizione: '' }
   ];
 
   info(persona: any) {
