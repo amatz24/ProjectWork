@@ -12,6 +12,7 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+    
     <div class="collapse navbar-collapse" id="navbarScroll">
       <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
           <li class="nav-item dropdown">
@@ -29,11 +30,11 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="cart">cart</a>
         </li>
-        <!--<li class="text-danger">{{cartService.count}}</li>  -->
         <li class="col"><div *ngIf="cartService.count != 0 " class="card book" >
           <i class="text-danger"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
             <circle cx="8" cy="8" r="8"/>
           </svg></i>
+
       </div>
         <li class="nav-item">
           <a class="nav-link" aria-disabled="true" routerLink="/about">about</a>
