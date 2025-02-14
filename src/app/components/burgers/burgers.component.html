@@ -25,7 +25,7 @@
         
         <div *ngFor="let ingrediente of selectedProduct.Ingredienti" class="ingrediente">
             <div class="ingredienti">
-                <label (click)="toggleIngrediente(ingrediente)">{{ ingrediente.Descrizione }}</label>
+                <label (click)="calcolaPrezzo()">{{ ingrediente.Descrizione }}</label>
             </div>
             
             <div class="quantita-controls">

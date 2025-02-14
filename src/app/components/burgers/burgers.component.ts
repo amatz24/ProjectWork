@@ -56,19 +56,6 @@ export class BurgersComponent {
 
     this.calcolaPrezzo(); 
   }
-
-  toggleIngrediente(ingrediente: any) {
-    ingrediente.checked = !ingrediente.checked;
-
-    if (ingrediente.checked) {
-      ingrediente.Quantita = ingrediente.QuantitaMin;  
-    } else {
-      ingrediente.Quantita = 0;  
-    }
-    this.calcolaPrezzo();  
-  }
-
-  
   salvaModifiche() {
     this.selectedProduct.Prezzo = this.prezzoTotale;
 
