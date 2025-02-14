@@ -1,6 +1,6 @@
 img {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
 }
 
 .right {
@@ -58,9 +58,9 @@ img {
     max-width: 90%;
     text-align: center;
     z-index: 5000;
-  }
-  
-  .buttons{
+}
+    
+.buttons{
     margin-bottom: 10px;
     display: flex;
     justify-content: center;
