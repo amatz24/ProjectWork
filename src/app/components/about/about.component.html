@@ -24,7 +24,22 @@
     <div class="modale">
         <h3>{{ selectedPerson?.nome }}</h3>
         <img [src]="selectedPerson?.img" class="modale-img">
-        <p>{{ selectedPerson?.descrizione }}</p>
+        <p *ngIf="selectedPerson?.descrizioneBreve">
+            {{ selectedPerson?.descrizioneBreve }}
+        </p>
+        <p *ngIf="selectedPerson?.descrizioneLunga && selectedPerson?.DescriptionExpanded">
+            {{ selectedPerson?.descrizioneLunga }}
+        </p>
+
+        <div class="d-flex flex-row-reverse">
+            <div class="p-2">
+        <button *ngIf="selectedPerson?.descrizioneLunga" class="btn-toggle" (click)="toggleDescription()">
+            {{ selectedPerson?.DescriptionExpanded ? 'Mostra meno' : 'Continua a leggere' }} 
+            <span>{{ selectedPerson?.DescriptionExpanded ? '⬆️' : '⬇️' }}</span>
+        </button>
+        </div>
+        </div>
+
         <button class="btn btn-danger" (click)="closeModal()">Chiudi</button>
     </div>
 </div>
