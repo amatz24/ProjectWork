@@ -3,13 +3,13 @@ import { Component } from '@angular/core';
 import { ProductsServiceTsService } from '../../services/products.service';
 import { ActivatedRoute } from '@angular/router';
 import { Prodotto } from '../../models/Prodotto';
-import { FormsModule } from '@angular/forms';
+
 import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-burgers',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule],
   templateUrl: './burgers.component.html',
   styleUrl: './burgers.component.css'
 })
