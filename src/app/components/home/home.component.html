@@ -42,7 +42,7 @@
 
     <button class="btn btn-outline-primary btn1" 
             (click)="selectAsporto()"
-            *ngIf="!serviceSelected && !asportoSelected">
+            *ngIf="!serviceSelected && !asportoSelected" routerLink="/burg">
         ASPORTO
     </button>
   </div>
@@ -56,7 +56,7 @@
   </div>
 
   <div class="d-flex flex-row-reverse">
-    <div class="p-2"><button class="btn btn-success mt-2 btn-big" (click)="confirmTable(tableInput.value)"><b>Conferma</b></button>
+    <div class="p-2"><button class="btn btn-success mt-2 btn-big" (click)="confirmTable(tableInput.value)" routerLink="/burg"><b>Conferma</b></button>
   </div>
 
 </div>
