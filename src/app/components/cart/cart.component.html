@@ -44,7 +44,7 @@
     <tfoot>
         <tr>
             <th  class="text-end"><strong>Totale:</strong></th>
-            <th class="align-middle"><strong>{{ calcolaTotale().toFixed(2) }}€</strong></th>
+            <th class="align-middle"><strong>{{ cartService.total.toFixed(2) }}€</strong></th>
             <th class="align-middle ">
                 <button type="button" (click)="paga()" class="btn btn-success">Paga</button>
                 <button type="button" routerLink ="/undo" class="btn btn-danger">Annulla Ordine</button>
