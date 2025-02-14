@@ -14,9 +14,7 @@ export class CartService {
   remove(prodotto:Prodotto) {
     this.cart = this.cart.filter(b => b.Id !== prodotto.Id);
   }
-  add(prodotto: Prodotto): boolean {    let item = this.cart.find(b => 
-      b.Id === prodotto.Id &&
-      JSON.stringify(b.Ingredienti) === JSON.stringify(prodotto.Ingredienti)
+  add(prodotto: Prodotto): boolean {    let item = this.cart.find(b => b.Id === prodotto.Id && JSON.stringify(b.Ingredienti) === JSON.stringify(prodotto.Ingredienti)
     );
   
     if (item) {
@@ -40,4 +38,8 @@ export class CartService {
   get count():number {
     return this.cart.length;
   }
+  get total():number {
+    return this.cart.reduce((totale, prodotto) => totale + (prodotto.Prezzo * prodotto.Quantita), 0);
+  }
+  
 }

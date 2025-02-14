@@ -107,5 +107,6 @@ getDessert(): Prodotto[] {
 getSideDish(): Prodotto[] {
     return this.getProduct().filter(prodotto => prodotto.Categoria === "Contorni");
 }
+
 }
 
